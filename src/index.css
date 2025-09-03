@@ -1,0 +1,360 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* TMG Branding Design System */
+
+@layer base {
+  :root {
+    /* TMG Official Brand Colors */
+    --color-primary-gold: #B99B5B;
+    --color-gold-highlight: #D4B46C;
+    /* For hover effects or accents */
+    --color-background-main: #DCDDDE;
+    --color-text-dark: #333333;
+    /* For body text and readability */
+    --color-text-light: #FFFFFF;
+
+    /* Converted to HSL for Tailwind compatibility */
+    --background: 220 3% 86%;
+    /* #DCDDDE */
+    --foreground: 0 0% 20%;
+    /* #333333 */
+
+    /* Primary TMG Gold */
+    --gold: 44 38% 54%;
+    /* #B99B5B */
+    --gold-dark: 44 38% 44%;
+    /* Darker version of TMG gold */
+    --gold-light: 44 45% 63%;
+    /* #D4B46C */
+
+    /* Card and Surface Colors */
+    --card: 220 3% 90%;
+    /* Slightly lighter than background */
+    --card-foreground: 0 0% 20%;
+    /* Dark text */
+
+    --popover: 220 3% 88%;
+    --popover-foreground: 0 0% 20%;
+
+    /* Primary uses TMG gold */
+    --primary: 44 38% 54%;
+    /* #B99B5B */
+    --primary-foreground: 0 0% 100%;
+    /* White text on gold */
+
+    /* Secondary subtle variants */
+    --secondary: 220 3% 76%;
+    --secondary-foreground: 0 0% 20%;
+
+    /* Muted variants */
+    --muted: 220 3% 70%;
+    --muted-foreground: 0 0% 35%;
+
+    /* Accent matches TMG gold highlight */
+    --accent: 44 45% 63%;
+    /* #D4B46C */
+    --accent-foreground: 0 0% 20%;
+
+    /* Destructive for errors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 220 3% 65%;
+    --input: 220 3% 88%;
+    --ring: 44 38% 54%;
+    /* TMG gold focus ring */
+
+    --radius: 0.75rem;
+
+    /* TMG Custom gradients */
+    --gradient-gold: linear-gradient(135deg, var(--color-primary-gold), var(--color-gold-highlight));
+    --gradient-gold-subtle: linear-gradient(135deg, hsl(44 38% 54% / 0.1), hsl(44 45% 63% / 0.2));
+    --gradient-background: linear-gradient(135deg, var(--color-background-main), hsl(220 3% 90%));
+
+    /* TMG Shadows */
+    --shadow-gold: 0 10px 30px -10px hsl(44 38% 54% / 0.3);
+    --shadow-gold-glow: 0 0 40px hsl(44 38% 54% / 0.4);
+    --shadow-elegant: 0 25px 50px -12px hsl(0 0% 0% / 0.2);
+
+    /* Animations */
+    --transition-luxury: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-smooth: all 0.3s ease-out;
+  }
+
+  /* Dark Mode TMG Color Variants */
+  .dark {
+    /* TMG Dark Mode Colors */
+    --color-background-main: #1a1a1a;
+    --color-text-dark: #DCDDDE;
+    --color-text-light: #FFFFFF;
+
+    /* Adjusted HSL colors for dark mode */
+    --background: 0 0% 10%;
+    /* Dark background */
+    --foreground: 220 3% 86%;
+    /* Light text */
+
+    --card: 0 0% 8%;
+    /* Darker cards */
+    --card-foreground: 220 3% 86%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 220 3% 86%;
+
+    --primary: 44 38% 54%;
+    /* Keep TMG gold */
+    --primary-foreground: 0 0% 10%;
+    /* Dark text on gold */
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 220 3% 86%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 220 3% 60%;
+
+    --accent: 44 45% 63%;
+    /* Keep TMG gold highlight */
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 220 3% 86%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 44 38% 54%;
+    /* TMG gold focus ring */
+
+    /* Dark mode gradients */
+    --gradient-background: linear-gradient(135deg, var(--color-background-main), hsl(0 0% 8%));
+    --shadow-elegant: 0 25px 50px -12px hsl(0 0% 0% / 0.8);
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-cairo;
+    font-feature-settings: "kern", "liga", "clig", "calt";
+  }
+
+  /* Ensure all headings use Cairo font */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Cairo', sans-serif;
+  }
+
+  /* Ensure all text elements use Cairo */
+  p,
+  span,
+  div,
+  button,
+  input,
+  textarea,
+  label {
+    font-family: 'Cairo', sans-serif;
+  }
+
+  /* TMG Scrollbar Colors (adapts to theme) */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-background-main);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-primary-gold);
+    border-radius: 4px;
+    transition: var(--transition-smooth);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gold-highlight);
+  }
+
+  /* Firefox scrollbar */
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-primary-gold) var(--color-background-main);
+  }
+
+  /* Dark mode specific adjustments */
+  .dark ::-webkit-scrollbar-track {
+    background: hsl(0 0% 10%);
+  }
+}
+
+@layer components {
+
+  /* TMG Direct CSS Variable Classes */
+  .tmg-bg-primary {
+    background-color: var(--color-primary-gold);
+  }
+
+  .tmg-bg-highlight {
+    background-color: var(--color-gold-highlight);
+  }
+
+  .tmg-bg-main {
+    background-color: var(--color-background-main);
+  }
+
+  .tmg-text-dark {
+    color: var(--color-text-dark);
+  }
+
+  .tmg-text-light {
+    color: var(--color-text-light);
+  }
+
+  .tmg-border-primary {
+    border-color: var(--color-primary-gold);
+  }
+
+  /* TMG Button Variants */
+  .btn-luxury {
+    @apply bg-gradient-to-r from-primary to-gold-light text-primary-foreground px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-gold-glow hover:scale-105 active:scale-95;
+  }
+
+  .btn-outline-gold {
+    @apply border-2 border-primary text-primary bg-transparent px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:shadow-gold-glow;
+  }
+
+  /* Property Card Hover Effect */
+  .property-card {
+    @apply bg-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-elegant hover:-translate-y-2;
+  }
+
+  /* TMG Gold Glow Effect */
+  .gold-glow {
+    filter: drop-shadow(0 0 20px var(--color-primary-gold));
+  }
+
+  .gold-glow-strong {
+    filter: drop-shadow(0 0 40px var(--color-gold-highlight));
+  }
+
+  /* Navigation Link Active State */
+  .nav-link {
+    @apply relative text-foreground hover:text-primary transition-colors duration-300;
+  }
+
+  .nav-link.active::after {
+    @apply content-[''] absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-100;
+  }
+
+  .nav-link::after {
+    @apply content-[''] absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 transition-transform duration-300 origin-left;
+  }
+
+  .nav-link:hover::after {
+    @apply scale-x-100;
+  }
+
+  /* Scroll Animations */
+  .fade-in-up {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+
+  .fade-in-up.animate {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* Cairo Font Utilities */
+  .font-cairo-light {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 300;
+  }
+
+  .font-cairo-regular {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 400;
+  }
+
+  .font-cairo-medium {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 500;
+  }
+
+  .font-cairo-semibold {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 600;
+  }
+
+  .font-cairo-bold {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+  }
+
+  .font-cairo-extrabold {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 800;
+  }
+
+  .font-cairo-black {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 900;
+  }
+
+  /* Override default font classes to use Cairo */
+  .font-sans {
+    font-family: 'Cairo', sans-serif !important;
+  }
+
+  .font-luxury {
+    font-family: 'Cairo', sans-serif !important;
+  }
+
+  .font-serif {
+    font-family: 'Cairo', sans-serif !important;
+  }
+}

@@ -1,0 +1,7 @@
+export { Navbar } from './Navbar'
+export { Hero } from './Hero'
+export { FeaturedProperties } from './FeaturedProperties'
+export { WhyUs } from './WhyUs'
+export { Testimonials } from './Testimonials'
+export { ContactSection } from './ContactSection'
+export { Footer } from './Footer'
