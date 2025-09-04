@@ -38,7 +38,7 @@ export default function LandingPage() {
     <div className="min-h-screen bg-background">
       <Navbar onScrollToSection={scrollToSection} />
       <Hero onScrollToSection={scrollToSection} />
-      <FeaturedProperties />
+      {/* <FeaturedProperties /> */}
       <WhyUs />
       <Testimonials />
       <ContactSection />

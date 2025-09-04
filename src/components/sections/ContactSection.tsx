@@ -60,17 +60,20 @@ export function ContactSection() {
         {
             icon: Phone,
             label: "Phone",
-            value: "01001218760"
+            value: "01001218760",
+            href: "tel:01001218760"
         },
         {
             icon: Mail,
             label: "Email",
-            value: "info@alex-tec.com"
+            value: "info@alex-tec.com",
+            href: "mailto:info@alex-tec.com"
         },
         {
             icon: MessageCircle,
             label: "WhatsApp",
-            value: "01001218760"
+            value: "01001218760",
+            href: "https://wa.me/2001001218760"
         }
     ]
 
@@ -200,15 +203,21 @@ export function ContactSection() {
                                 {contactInfo.map((contact, index) => {
                                     const IconComponent = contact.icon
                                     return (
-                                        <div key={index} className="flex items-center">
-                                            <div className="w-12 h-12 bg-gradient-gold rounded-full flex items-center justify-center mr-4">
+                                        <a
+                                            key={index}
+                                            href={contact.href}
+                                            target={contact.label === "WhatsApp" ? "_blank" : undefined}
+                                            rel={contact.label === "WhatsApp" ? "noopener noreferrer" : undefined}
+                                            className="flex items-center hover:bg-primary/5 p-3 rounded-lg transition-colors duration-300 group"
+                                        >
+                                            <div className="w-12 h-12 bg-gradient-gold rounded-full flex items-center justify-center mr-4 group-hover:shadow-gold-glow transition-all duration-300">
                                                 <IconComponent className="w-6 h-6 text-primary-foreground" />
                                             </div>
                                             <div>
                                                 <p className="text-foreground font-medium">{contact.label}</p>
-                                                <p className="text-muted-foreground">{contact.value}</p>
+                                                <p className="text-muted-foreground group-hover:text-primary transition-colors duration-300">{contact.value}</p>
                                             </div>
-                                        </div>
+                                        </a>
                                     )
                                 })}
                             </div>
