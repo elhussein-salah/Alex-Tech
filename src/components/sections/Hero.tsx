@@ -33,13 +33,13 @@ export function Hero({ onScrollToSection }: HeroProps) {
                 <p className="text-xl md:text-2xl text-foreground mb-8 fade-in-up">
                     {/* Premium real estate solutions with flexible payment plans */}
                 </p>
-                <LuxuryButton
+                {/* <LuxuryButton
                     variant="hero"
                     onClick={() => onScrollToSection('projects')}
                     className="fade-in-up"
                 >
                     Explore Properties
-                </LuxuryButton>
+                </LuxuryButton> */}
             </div>
         </section>
     )

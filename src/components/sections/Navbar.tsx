@@ -45,9 +45,9 @@ export function Navbar({ onScrollToSection }: NavbarProps) {
                         <button onClick={() => handleNavClick('home')} className="nav-link active">
                             Home
                         </button>
-                        <button onClick={() => handleNavClick('projects')} className="nav-link">
+                        {/* <button onClick={() => handleNavClick('projects')} className="nav-link">
                             Projects
-                        </button>
+                        </button> */}
                         <button onClick={() => handleNavClick('why-us')} className="nav-link">
                             Why Us
                         </button>
@@ -81,9 +81,9 @@ export function Navbar({ onScrollToSection }: NavbarProps) {
                             <button onClick={() => handleNavClick('home')} className="nav-link text-left">
                                 Home
                             </button>
-                            <button onClick={() => handleNavClick('projects')} className="nav-link text-left">
+                            {/* <button onClick={() => handleNavClick('projects')} className="nav-link text-left">
                                 Projects
-                            </button>
+                            </button> */}
                             <button onClick={() => handleNavClick('why-us')} className="nav-link text-left">
                                 Why Us
                             </button>
