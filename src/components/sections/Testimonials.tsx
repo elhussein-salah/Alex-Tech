@@ -3,20 +3,20 @@ import { Star } from "lucide-react"
 export function Testimonials() {
     const testimonials = [
         {
-            name: "John Smith",
-            initials: "JS",
+            name: "Fathy Ahmed",
+            initials: "FA",
             rating: 5,
             text: "Alex Tech made our dream home a reality. Their expertise and attention to detail is unmatched."
         },
         {
-            name: "Maria Johnson",
-            initials: "MJ",
+            name: "EL-Hussein Salah",
+            initials: "ES",
             rating: 5,
             text: "Professional service and beautiful properties. We couldn't be happier with our investment."
         },
         {
-            name: "Robert Davis",
-            initials: "RD",
+            name: "Mostafa Ahmed",
+            initials: "MA",
             rating: 5,
             text: "The best real estate company we've worked with. Highly recommend Alex Tech!"
         }
